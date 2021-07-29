@@ -16,15 +16,13 @@ export class MovieDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private movieService: MovieService,
+    private location: Location
+
   ) { }
 
   ngOnInit(): void {
-
-  /*   getMovie(): void {
-  const id = Name(this.route.snapshot.paramMap.get('id'));
-  this.movieService.getMovie(id)
-    .subscribe(movie => this.movie = movie);
-} */
+  
+}
 }
 
-}
+
