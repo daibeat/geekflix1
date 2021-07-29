@@ -14,3 +14,14 @@
     </div>
 </div>
 
+
+<div *ngIf="movie">
+    <h2>{{movie.name | uppercase}} Details</h2>
+    <div>{{movie.desc}}</div>
+    <div>
+      <label for="movie-name">Movie  </label>
+    </div> 
+  </div>
+
+ 
+  
