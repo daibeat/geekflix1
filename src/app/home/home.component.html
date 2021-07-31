@@ -1,32 +1,25 @@
-
 <h1 class="title text-center h1-responsive">Geek Flix</h1>
-<div *ngIf="movies">
+
+
+
   <div class="container">
     <div class="row">
-      <!-- Loop Popular movies, limit result with slice -->
       <div
         class="col-4 col-md-4 col-lg-3 my-3 px-2 px-md-4"
-        *ngFor="let movie of movies"
-        [class.selected]="movie === selectedMovie"
-        >
-        <div>
-          <a  routerLink="/movie-detail/:id{{ movie.name }}">
-
-           <img src="{{ movie.image }}" 
-           class="img-responsive" 
-           alt="Responsive image"
-           title="{{ movie.name }}"
-           alt="{{ movie.name }}"
-           />
-          </a>
+        *ngFor="let album of albums | async">
+          <a  
+          class="view overlay" 
+          routerLink="movie-detail/:id{{ album.id }}">{{album.title}}
+            <img
+              class="poster-img"
+              src="https://cdn.pastemagazine.com/www/system/images/photo_albums/best-movie-posters-2016/large/moonlight-ver2-xlg.jpg?1384968217"
+              title="{{ album.title }}"
+              alt="{{ album.title }}"
+              routerLink="/movie-detail/{{ album.id }}"           
+               />
             
-            <h3>{{  movie.name | uppercase}}</h3>
-            <p>{{  movie.desc}}<p>
-              
-            </div>
-    </div>
-      </div>
-      </div>
-
-
-
+            <h3>{{ album.title }}</h3>
+            <p>{{ album.overview}}</p>
+          </a>
+        </div>
+        </div>

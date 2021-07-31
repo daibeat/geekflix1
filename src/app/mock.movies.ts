@@ -1,4 +1,4 @@
-import { Movie } from './movie';
+/* import { Movie } from './movie';
 
 export const MOVIES: Movie[] = [
   {  name: 'Dr Nice',
@@ -15,4 +15,4 @@ image: 'https://m.media-amazon.com/images/M/MV5BMmQ2MmU3NzktZjAxOC00ZDZhLTk4YzEt
 desc: 'movekjlaksdjfñ lañkdsjflñ',
 image: 'https://creativereview.imgix.net/content/uploads/2019/12/joker_full.jpg?auto=compress,format&q=60&w=1012&h=1500'
 },
-];
+]; */
