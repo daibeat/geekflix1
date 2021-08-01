@@ -12,14 +12,29 @@ import { ActivatedRoute } from "@angular/router";
 
 export class HomeComponent implements OnInit {
   
-  albums:any = [];
+  movies: any;
 
 
-  constructor(private movieService: MovieService) { }
+  constructor(private movieService: MovieService,
+    private route: ActivatedRoute,
+    ) { }
 
- 
-    ngOnInit() {
-      this.albums = this.movieService.getMovies();
+  
+    ngOnInit() :void   {
+      this.getMovies();
     }
 
+ 
+   
+      getMovies() :void {
+        this.movieService.getMovieDetails()
+        .subscribe(movies => {
+          console.log(movies);
+
+          //TODO fix the results
+          //  this.movies = movies ['results'];
+        });
+      }
   }
+
+  

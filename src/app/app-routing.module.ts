@@ -6,9 +6,10 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'movie-detail/:id', component: MovieDetailComponent },
-  { path: 'home', component: HomeComponent }
+  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
+
 
 ];
 
