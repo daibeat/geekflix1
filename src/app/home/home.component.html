@@ -1,5 +1,17 @@
 <h1 class="title text-center h1-responsive">Geek Flix</h1>
-<!-- Loop Popular movies, limit result with slice -->
-<div *ngFor="let movie of movies">
-  <div>{{movie.title}}</div>
+
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="col-4 col-md-4 col-lg-3" *ngFor="let movie of movies">
+        <div>
+          <a routerLink="/movie/{{ movie.id }}">
+            <img class="poster-img" src="https://image.tmdb.org/t/p/w400/{{ movie.poster_path }}" alt="Card image" />
+          </a>
+          <h4>{{ movie.title }}</h4>
+            <p>{{ movie.overview }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

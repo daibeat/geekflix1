@@ -9,6 +9,7 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ['./home.component.css']
 })
 
+
 export class HomeComponent implements OnInit {
   public movies!: MovieV2[];
 
@@ -29,6 +30,7 @@ export class HomeComponent implements OnInit {
         this.movies = pagedResults.results;
       });
   }
+  
 }
 
 
